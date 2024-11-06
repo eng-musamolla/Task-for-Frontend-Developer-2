@@ -1,11 +1,11 @@
-.card {
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-}
 
+.card {
+    background-color: #f7f8fa;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
 .card h4 {
     font-size: 1em;
     margin: 0;
@@ -17,4 +17,100 @@
     justify-content: space-between;
     font-size: 0.9em;
     color: #888;
+}
+
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.assigned-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-count {
+    background-color: #e8f0fe;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    color: #333;
+    margin-left: 8px;
+}
+
+.card-content {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.user-photo-small {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.more-users {
+    font-size: 0.8em;
+    background-color: #e9e9ed;
+    /* margin-left: 4px; */
+    width: 24px;
+    height: 24px;
+    padding: 2px ;
+    line-height: 24px;
+    border-radius: 50%;
+}
+
+.icon-group {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    color: #777;
+    gap: 8px;
+}
+
+
+.icon {
+    margin-right: 4px;
+    font-size: 0.9em;
+    color: #777;
+}
+.icon {
+    margin-right: 4px;
+    font-size: 0.9em;
+    color: #777;
 }

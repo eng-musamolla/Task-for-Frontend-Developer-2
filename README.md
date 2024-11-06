@@ -22,12 +22,9 @@
 - **Frontend**: Complete the task using React.js.
 - **Backend**: You may use Laravel/PHP or Node.js to handle data storage.[here is am going to use MongoDB]
 
-## Submission
-1. **Deadline**: 24 hours (contact if you need an extension).
-2. **Submission Instructions**:
-   - Upload all resources to a GitHub repository and share the link.
-   - Provide a live link to the deployed task.
-   - For questions, call: `01973132603`.
+
+## Live Link
+To view the completed task, visit the [GitHub repository](https://github.com/eng-musamolla/Task-for-Frontend-Developer-2) and the [live deployment](https://github.com/eng-musamolla/Task-for-Frontend-Developer-2).
 
 ---
 

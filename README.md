@@ -7,20 +7,20 @@
    - **Case 2**: Make the cards within the view scrollable according to their parent container.
 
 ## Part 2: Attachment Modal and List View
-1. **Check Screenshot**: [Local Screenshot](./Task%20Notes/Taks%202.webp)
+1. **Check Screenshot**: ![Local Screenshot](./Task%20Notes/Taks%202.webp)
 2. **Task Requirements**:
    - **Case 1**: Add functionality to open a modal via JavaScript when an attachment is selected.
    - **Case 2**: Enable multiple file uploads, displaying each file in a list view with its original filename and extension.
 
 ## Part 3: API for File Uploads
-1. **Check Screenshot**: [Local Screenshot](./Task%20Notes/Taks%203.webp)
+1. **Check Screenshot**: ![Local Screenshot](./Task%20Notes/Taks%203.webp)
 2. **Task Requirements**:
    - Create an API to handle file uploads and save data to a database.
    - Include a counter to track the number of uploaded attachments.
 
 ## Requirements
 - **Frontend**: Complete the task using React.js.
-- **Backend**: You may use Laravel/PHP or Node.js to handle data storage.
+- **Backend**: You may use Laravel/PHP or Node.js to handle data storage.[here is am going to use MongoDB]
 
 ## Submission
 1. **Deadline**: 24 hours (contact if you need an extension).

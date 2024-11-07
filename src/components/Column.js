@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import "./Column.css";
 
-const Column = ({ item }) => {
+const Column = ({ item, refetch }) => {
   let color;
 
   switch (item._id) {
@@ -44,7 +44,7 @@ const Column = ({ item }) => {
       {/* Card component */}
       <div className="card-container">
         {item.tasks?.map((task, i) => (
-          <Card task={task} key={i} />
+          <Card refetch={refetch} task={task} key={i} />
         ))}
       </div>
     </div>

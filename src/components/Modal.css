@@ -51,7 +51,9 @@ line-height: 0;
 }
 
 .file-item{
-    /* border: #a1a1a1 solid; */
+    border: #a1a1a1 solid 0.5px;
+    display: flex;
+    align-items: center;
     padding: 4px;
     border-radius: 8px;
     display: flex;

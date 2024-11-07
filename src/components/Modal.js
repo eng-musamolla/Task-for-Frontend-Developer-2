@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Modal.css";
 import { FiDelete } from "react-icons/fi";
 import { IoCloseCircle } from "react-icons/io5";
-const Modal = ({ show, onClose, files, setFiles, id }) => {
+const Modal = ({ show, onClose, files, setFiles, id, refetch }) => {
   const [newFiles, setNewFiles] = useState([]);
 
   if (!show) return null;
@@ -34,8 +34,8 @@ const Modal = ({ show, onClose, files, setFiles, id }) => {
       .catch((error) => {
         console.error("Error:", error);
       });
-
-    onClose(); // Close the modal after submission
+    refetch();
+    onClose();
   };
 
   // Handle file removal
@@ -56,16 +56,38 @@ const Modal = ({ show, onClose, files, setFiles, id }) => {
             top: "10px",
             right: "10px",
             cursor: "pointer",
+            color: "#ff5c5c",
           }}
           onClick={onClose}
         >
           <IoCloseCircle size={25} />
         </span>
-        <h2>Uploaded Attachments</h2>
+        <h2 style={{ textAlign: "center", color: "#333" }}>
+          Uploaded Attachments
+        </h2>
         <ul className="file-list">
           {newFiles.map((file, index) => (
             <li key={index} className="file-item">
-              <p className="file-name">
+              <img
+                src={URL.createObjectURL(file)}
+                alt={file.name}
+                className="file-preview"
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                }}
+              />
+              <p
+                className="file-name"
+                style={{
+                  marginTop: "10px",
+                  color: "#555",
+                  textAlign: "center",
+                }}
+              >
                 {index + 1}
                 {". "}
                 {file.name}
@@ -73,6 +95,12 @@ const Modal = ({ show, onClose, files, setFiles, id }) => {
               <button
                 onClick={() => handleRemoveFile(index, true)}
                 className="remove-button"
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  color: "#ff5c5c",
+                }}
               >
                 <FiDelete size={15} />
               </button>
@@ -96,11 +124,27 @@ const Modal = ({ show, onClose, files, setFiles, id }) => {
               padding: "10px",
               borderRadius: "5px",
               border: "1px solid #ccc",
+              width: "80%",
+              maxWidth: "400px",
             }}
           />
         </div>
 
-        <button onClick={handleSubmit} className="submit-button">
+        <button
+          onClick={handleSubmit}
+          className="submit-button"
+          style={{
+            display: "block",
+            margin: "20px auto",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            backgroundColor: "#4CAF50",
+            color: "#fff",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "16px",
+          }}
+        >
           Submit
         </button>
       </div>

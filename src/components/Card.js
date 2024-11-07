@@ -6,7 +6,7 @@ import { HiClipboardList } from "react-icons/hi";
 import { RiStackFill } from "react-icons/ri";
 import Modal from "./Modal";
 
-const Card = ({ task }) => {
+const Card = ({ refetch, task }) => {
   const [showModal, setShowModal] = useState(false);
   const [files, setFiles] = useState([]);
   const [id, setId] = useState("");
@@ -21,7 +21,13 @@ const Card = ({ task }) => {
 
   return (
     <>
-      <Modal show={showModal} onClose={closeModal} files={files} id={id} />
+      <Modal
+        show={showModal}
+        onClose={closeModal}
+        files={files}
+        id={id}
+        refetch={refetch}
+      />
       <div className="card">
         <div className="card-header">
           <div className="user-info">

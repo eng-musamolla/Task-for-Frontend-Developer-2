@@ -2,7 +2,8 @@ import React from "react";
 import Card from "./Card";
 import "./Column.css";
 
-const Column = ({ title, color }) => {
+const Column = ({ item, color }) => {
+  console.log(item);
   return (
     <div className="column">
       <div className="header">
@@ -11,15 +12,15 @@ const Column = ({ title, color }) => {
             className="column-icon"
             style={{ backgroundColor: color }}
           ></span>
-          <h3 style={{ marginBottom: "2px" }}>{title}</h3>
+          <h3 style={{ marginBottom: "2px" }}>{item?._id}</h3>
         </div>
-        <h3 style={{}}>{0}</h3>
+        <h3 style={{}}>{item?.count}</h3>
       </div>
 
       {/* Card component */}
       <div className="card-container">
-        {[...Array(10)].map((_, i) => (
-          <Card key={i} />
+        {item.tasks?.map((task, i) => (
+          <Card task={task} key={i} />
         ))}
       </div>
     </div>

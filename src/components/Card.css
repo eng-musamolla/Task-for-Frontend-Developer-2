@@ -74,7 +74,7 @@
 .user-group {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
 }
 
 .user-photo-small {
@@ -87,7 +87,6 @@
 .more-users {
     font-size: 0.8em;
     background-color: #e9e9ed;
-    /* margin-left: 4px; */
     width: 24px;
     height: 24px;
     padding: 2px ;
@@ -100,7 +99,7 @@
     align-items: center;
     font-size: 0.85em;
     color: #777;
-    gap: 8px;
+    gap: 16px;
 }
 
 
@@ -113,4 +112,16 @@
     margin-right: 4px;
     font-size: 0.9em;
     color: #777;
+}
+
+
+
+.upload-label {
+    cursor: pointer;
+    color: #007bff;
+    margin-left: 8px;
+}
+
+.upload-label:hover {
+    text-decoration: underline;
 }

@@ -21,7 +21,7 @@ const Modal = ({ show, onClose, files, setFiles, id, refetch }) => {
 
     const taskId = id;
 
-    fetch(`http://localhost:5000/${taskId}`, {
+    fetch(`https://bt.musamolla.com/${taskId}`, {
       method: "PUT",
       body: formData,
     })

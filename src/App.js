@@ -21,7 +21,7 @@ function App() {
       <div className="columns-container">
         {data?.map((item, index) => (
           <React.Fragment key={index}>
-            <Column item={item} color="#FF4D4D" />
+            <Column item={item} />
           </React.Fragment>
         ))}
       </div>

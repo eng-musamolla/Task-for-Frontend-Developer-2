@@ -9,6 +9,7 @@ import Modal from "./Modal";
 const Card = ({ task }) => {
   const [showModal, setShowModal] = useState(false);
   const [files, setFiles] = useState([]);
+  const [id, setId] = useState("");
 
   const openModal = () => {
     setShowModal(true);
@@ -20,7 +21,7 @@ const Card = ({ task }) => {
 
   return (
     <>
-      <Modal show={showModal} onClose={closeModal} files={files} />
+      <Modal show={showModal} onClose={closeModal} files={files} id={id} />
       <div className="card">
         <div className="card-header">
           <div className="user-info">
@@ -67,6 +68,7 @@ const Card = ({ task }) => {
                 onClick={() => {
                   openModal();
                   setFiles(task.attachments);
+                  setId(task._id);
                 }}
                 style={{ cursor: "pointer" }}
               />{" "}

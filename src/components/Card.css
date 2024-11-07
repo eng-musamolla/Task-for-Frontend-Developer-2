@@ -33,9 +33,10 @@
 }
 
 .user-photo {
-    width: 32px;
+    width: 32px; 
     height: 32px;
-    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio and crop if necessary to fill */
+    border-radius: 50%; 
     margin-right: 8px;
 }
 
@@ -80,6 +81,7 @@
 .user-photo-small {
     width: 24px;
     height: 24px;
+    object-fit: cover; /* Maintain aspect ratio and crop if necessary to fill */
     border-radius: 50%;
     margin-right: 4px;
 }

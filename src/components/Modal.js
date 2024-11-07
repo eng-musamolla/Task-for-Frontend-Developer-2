@@ -2,16 +2,11 @@ import React, { useState } from "react";
 import "./Modal.css";
 import { FiDelete } from "react-icons/fi";
 import { IoCloseCircle } from "react-icons/io5";
-const Modal = ({ show, onClose, files, setFiles }) => {
-  const [newFiles, setNewFiles] = useState([
-    { name: "document1.pdf" },
-    { name: "image1.png" },
-    { name: "presentation1.pptx" },
-  ]);
+const Modal = ({ show, onClose, files, setFiles, id }) => {
+  const [newFiles, setNewFiles] = useState([]);
 
   if (!show) return null;
 
-  console.log("fille....:", files);
   // Handle file input change
   const handleFileChange = (event) => {
     const uploadedFiles = Array.from(event.target.files);
@@ -24,7 +19,7 @@ const Modal = ({ show, onClose, files, setFiles }) => {
       formData.append("files", file); // Append each file to FormData
     });
 
-    const taskId = "your-task-id-here"; // Replace with the actual task ID
+    const taskId = id;
 
     fetch(`http://localhost:5000/${taskId}`, {
       method: "PUT",

@@ -2,8 +2,32 @@ import React from "react";
 import Card from "./Card";
 import "./Column.css";
 
-const Column = ({ item, color }) => {
-  console.log(item);
+const Column = ({ item }) => {
+  let color;
+
+  switch (item._id) {
+    case "Incomplete":
+      color = "#FF4D4D";
+      break;
+    case "To Do":
+      color = "#4DA6FF";
+      break;
+    case "Doing":
+      color = "#FFD700";
+      break;
+    case "Under Review":
+      color = "#B19CD9";
+      break;
+    case "Completed":
+      color = "#32CD32";
+      break;
+    case "Overdue":
+      color = "#FF6347";
+      break;
+    default:
+      color = "#000000"; // Default color if none of the cases match
+  }
+
   return (
     <div className="column">
       <div className="header">
